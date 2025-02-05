@@ -38,9 +38,210 @@ header{
     align-items: center;
     background: var(--bg-color);
     transition: 0.2s;
-    box-shadow: -3px -3px 7px #ffffff73 ,2px 2px 5px rgba(94 104 121 0.288);
+    box-shadow: -3px -3px 7px #000 ,2px 2px 5px rgba(94, 104, 121, 0.288);
+    padding: 13px 10%;
     
 }
-header.shadow{
+
+/* header.shadow{
     box-shadow: 0 0 4px rgb(14 55 54 /15%);
+} */
+
+ .logo{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--txt-color);
+
+ }
+ 
+ .navbar{
+    display: flex;
+    justify-content: space-evenly;
+ }
+ 
+ .navbar a{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0px 20px;
+    color: var(--txt-color);
+    &:hover{
+        color: var(--hover);
+    }
+
+ }
+ 
+ #menu{
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 24px;
+ }
+
+ /* From Uiverse.io by mrhyddenn */ 
+button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #000;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  
+  button:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    color: #fff;
+  }
+  
+  button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+
+  .home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+
+  }
+
+  .home_image img{
+    width: 100%;
+  }
+  .home_text span{
+    font-size: var(--medium-font);
+    font-weight: 500;
+  }
+  
+  .home_text h1{
+    font-size: var(--big-font);
+  }
+  .home_text h2{
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  .home_text p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    margin: 0.7rem 0 1rem;
+  }
+  .social{
+    display: flex;
+    flex-direction: column;
+  }
+  .social a{
+    margin-bottom: 1rem;
+    font-size: 22px;
+    color: var(--txt-color);
+    &:hover{
+        color: var(--hover);
+        transform: scale(1.09);
+        transition: 0.5s;
+    }
+  }
+  .home_image{
+    order: 1;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .about-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+
+  }
+  .about-image img{
+    width: 80%;
+    border-radius: 0.5 rem;
+  }
+  .about-text p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    text-align:justify;
+  } 
+  .information{
+     margin: 1rem 0 1.4rem;
+  }
+.information .info-box{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.4rem;
+}
+.information .info-box .bx{
+   font-size: 22px;
+}
+.info-box span{
+  font-weight: 400;
+  margin-left: 1rem;
+}
+.heading{
+  text-align: center;
+}
+.heading h2{
+  font-size: 30px;
+
+}
+.heading span{
+  font-size: var(--p-font);
+  color: rgb(2,166,70);
 }
