@@ -362,3 +362,145 @@ button {
   color: #8b8a8f;
   transition: 0.8s;
 }
+.project-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit ,minmax(200px,auto));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.project-image{
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.project-image img{
+  width: 100%;
+  display: block;
+  &:hover{
+    transform: scale(1.1);
+    transition: 1s;
+  }
+}
+.contact-form{
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+.contact-form form{
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+}
+form input,textarea{
+  padding: 15px;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #4b00e01a;
+  margin-bottom: 1rem;
+  color: var(--txt-color);
+}
+form input::placeholder,textarea::placeholder{
+  color: var(--txt-color);
+}
+form textarea{
+  resize: none;
+  height: 200px;
+}
+form button{
+  width: 150px;
+  margin-left: 255px;
+}
+.footer{
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #ebebeb;
+  color: var(--txt-color);
+
+}
+.footer h2{
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
+}
+.footer-box a i{
+  color: rgb(10,26,208);
+  font-size: 25px;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+ &:hover{
+  transform: scale(1.2);
+  transition: 1s;
+  background-color: #000;
+  color: #fff;
+ }
+}
+.copy{
+  background-color: var(--main-color);
+  text-align: center;
+  padding: 20px;
+  color: var(--bg-color);
+
+}
+.copy span{
+  color: #22cf91;
+}
+/* @media(max-width:991px){
+  header{
+    padding: 18px 4%;
+  }
+  section{
+    padding: 50px 4%;
+  }
+} */
+ @media(max-width:768px){
+  :root{--big-font:2.4rem; --medium-font:1.2rem}
+  header{
+    padding: 11px 4%;
+  }
+  #menu{
+    display: initial;
+    color: var(--txt-color);
+  }
+  header .navbar{
+    position: absolute;
+    top: -500px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    box-shadow: 0 4px 4px #0000001a;
+    transition: 0.2s ease;
+    text-align: center;
+  }
+  .navbar .active{
+    top: 100%;
+  }
+  .navbar a{
+    padding: 1.5rem;
+    display: block;
+    background: var(--bg-color);
+
+  }
+  .scroll-down{
+    display: none;
+
+  }
+  .home{
+    grid-template-columns: 0.5fr 3fr;
+  }
+  .home-text{
+    grid-column: 1/3;
+    padding-left: 1.4rem;
+  }
+  .home_image{
+    order: initial;
+
+  }
+ }
